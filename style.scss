@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courgette', cursive;
+}
+body {
+    position: relative;
+}
+header,footer {
+    position: fixed;
+    z-index: 3;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+}
+header {
+    top: 0;
+    left: 0;
+    animation: slide_up 1s forwards;
+}
+footer {
+    bottom: 0;
+    left: 0;
+    animation: slide_down 1s forwards;
+}
+.bgc-primary {
+    background-color: #E6CDB9;
+}
+.bg-light {
+    background-color: white;
+}
+strong{
+    color: #aa5713;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+.tac {
+    text-align: center;
+}
+a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+}
+.text-light {
+    color: white;
+}
+p,h3,h2 {
+    padding: 5px 0;
+    opacity: .6;
+    line-height: 1.5;
+}
+.container {
+    width: 100%;
+    padding: 10px 30px;
+}
+main.container {
+    padding: 80px 20px;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    padding: 5px 0;
+}
+.element {
+    margin: 20px 0;
+    background-color: white;
+    animation: slide_left 1s;
+    cursor: pointer;
+    transition: all .3s;
+}
+.el-2 {
+    animation: slide_right 1s;
+}
+@keyframes slide_left {
+    0%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes slide_right {
+    0%{
+        transform: translateX(100%);
+    }
+}
+@keyframes slide_up {
+    0%{
+        top: -10%;
+    }
+}
+@keyframes slide_down {
+    0%{
+        bottom: -10%;
+    }
+}
+@media (min-width: 700px) {
+    p,h3,h2 {
+        padding: 7.5px 0;
+        opacity: .8;
+        line-height: 1.65;
+    }
+    .container {
+        width: 100%;
+        padding: 10px 40px;
+    }
+    main.container {
+        padding: 120px 40px;
+    }
+    img {
+        width: 100%;
+        padding: 7.5px 0;
+    }
+}
+@media (min-width: 1000px) {
+    p,h3,h2 {
+        padding: 10px 0;
+        line-height: 1.75;
+    }
+    .container {
+        width: 100%;
+        padding: 10px 20px;
+    }
+    main.container {
+        padding: 100px 5%;
+        background-color: #eeeae7;
+    }
+    img {
+        width: 100%;
+        padding: 0;
+    }
+    .element {
+        margin: 30px 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+        border-radius: 5px;
+        .title, .content {
+            width: 50%;
+        }
+        .content{
+            padding-right: 20px;
+        }
+    }
+    .el-2{
+        flex-direction: row-reverse;
+        .content{
+            padding-left: 20px;
+        }
+    }
+}
